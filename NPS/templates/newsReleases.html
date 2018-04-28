@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>News Releases</h1>
+
+    <div class="row onePadding">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Code</th>
+                        <th>Release Date</th>
+                        <th>Title</th>
+                        <th>Url</th>
+                    </tr>
+                {% for newsRelease in newsReleases %}
+                    <tr>
+                        <td>{{newsRelease.parkCode}}</td>
+                        <td>{{newsRelease.releaseDate}}</td>
+                        <td>{{newsRelease.title}}</td>
+                        <td><a href= "newsRelease/{{newsRelease.id}}">{{newsRelease.url}}</a></td>
+                    </tr>
+                {% endfor %}   
+        </table>
+    </div>
+</div>
+</div>
+
+{% endblock %}
