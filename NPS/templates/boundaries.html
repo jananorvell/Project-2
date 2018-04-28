@@ -3,19 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>National Parks</title>
+  <title>Park Boundaries</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="boundaries.css">
+  <link rel="stylesheet" type="text/css" href={{ url_for('static', filename="boundaries.css") }}/>
 
 </head>
 
   <div class='custom-popup' id="map"></div>
-  <script type="text/javascript" src="boundaries.js"></script>
+  <script type="text/javascript" src={{ url_for('static', filename='boundaries.js') }}></script>
 
 </body>
 

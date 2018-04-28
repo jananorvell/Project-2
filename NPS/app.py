@@ -1,18 +1,20 @@
 from flask import Flask, render_template
 from articles import NewsReleases
 
+
 app = Flask (__name__)
 
 NewsReleases = NewsReleases()
+
 
 
 @app.route('/')
 def index ():
     return render_template('home.html')
 
-@app.route('/data')
-def about():
-    return render_template('data.html')
+@app.route('/boundaries')
+def boundaries():
+    return render_template('boundaries.html')
 
 @app.route('/articles')
 def newsReleases ():
@@ -37,6 +39,10 @@ def jana():
 @app.route('/patsy')
 def patsy():
     return render_template('patsy.html')
+
+@app.route('/visits')
+def visits():
+    return render_template('visits.html')
 
 
 

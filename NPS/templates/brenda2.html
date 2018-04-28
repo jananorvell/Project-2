@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1> Brenda's Page!</h1>
+<div class="picture">
+    <img src="" alt="nps">
+</div>
+<div class="caption">
+    <text p="" alt="nps">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+<script type="text/javascript">
+    // Example queryURL for NPS API
+    var park = "zion";
+    var queryURL2 = "https://developer.nps.gov/api/v1/parks?parkCode=" + park + "&parkCode=&api_key=ti2fXIseEMVNDX6EAOyAdxAQBifdR58otaYMYIOY";
+    var queryURL = "https://developer.nps.gov/api/v1/parks?parkCode=zion&fields=images&api_key=ti2fXIseEMVNDX6EAOyAdxAQBifdR58otaYMYIOY";
+
+    d3.json(queryURL, function (error, response) {
+        if (error) return console.warn(error);
+        console.log("url", response)     });
+
+
+
+        //   var url = response.data[0].images[1].url;
+        //   d3.select("img").attr("src", url);
+        <div class="picture">
+            <div><img src="response.data[0].images[1].url" alt="" /></div>
+            <div><img src="response.data[0].images[2].url" alt="" /></div>
+            <div><img src="response.data[0].images[3].url" alt="" /></div>
+        </div>
+
+            <div class="caption">
+                <div><text p="response.data[0].images[1].url" alt="" />></div>
+                <div><text p="response.data[0].images[2].url" alt="" /></div>
+                <div><text p="response.data[0].images[3].url" alt="" /></div>
+            </div>
+
+</script>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est laborum. </p>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+            $('.picture').slick({
+                autoplay: true,
+
+            });
+        });
+</script>
+
+{% end block %}
