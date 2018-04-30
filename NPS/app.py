@@ -24,21 +24,11 @@ def newsReleases ():
 def newsRelease (id):
     return render_template('newsRelease.html', id=id)
 
-@app.route('/brenda')
-def brenda():
-    return render_template('brenda.html')
+@app.route('/parks')
+def parks():
+    return render_template('parks.html')
 
-@app.route('/diane')
-def diane():
-    return render_template('diane.html')
 
-@app.route('/jana')
-def jana():
-    return render_template('jana.html')
-
-@app.route('/patsy')
-def patsy():
-    return render_template('patsy.html')
 
 @app.route('/visits')
 def visits():
