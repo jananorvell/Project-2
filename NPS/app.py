@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-from articles import NewsReleases
+# from articles import NewsReleases
 
 
 app = Flask (__name__)
 
-NewsReleases = NewsReleases()
+# NewsReleases = NewsReleases()
 
 
 
@@ -16,13 +16,13 @@ def index ():
 def boundaries():
     return render_template('boundaries.html')
 
-@app.route('/articles')
-def newsReleases ():
-    return render_template('newsReleases.html', newsReleases = NewsReleases)
+# @app.route('/articles')
+# def newsReleases ():
+#     return render_template('newsReleases.html', newsReleases = NewsReleases)
 
-@app.route('/article/<string:id>/')
-def newsRelease (id):
-    return render_template('newsRelease.html', id=id)
+# @app.route('/article/<string:id>/')
+# def newsRelease (id):
+#     return render_template('newsRelease.html', id=id)
 
 @app.route('/parks')
 def parks():

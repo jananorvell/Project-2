@@ -53,7 +53,8 @@
 
                     //url
                     var parkurl = response.data[0].url;
-                    console.log(parkurl);
+                  
+   
                     
 
 
@@ -68,11 +69,21 @@
                         .append("br");
 
                     var urltDiv = d3.select("#imgGoesHere").append("div").attr("class", "url")
-                    urltDiv.append("url") .append("xhtml:url") 
-                                         .html("<a href= parkurl >My awesome link!</a>");
+                    urltDiv.append("xhtml:url").attr("xlink:href", function (d){
+                         return parkurl }).html("<a href=", parkurl, ">My awesome link!</a>");
                         
-                    urltDiv.append("text").text(parkurl).append("img").attr("href", parkurl);
-                       
+                    urltDiv.append("text").html(parkurl).append("img").attr("href", function(response){return parkurl });
+                    
+                    var a = document.createElement('a');
+						var linkText = document.createTextNode(park);
+						a.appendChild(linkText);
+						a.title = parkurl;
+						a.href = parkurl;
+						document.body.appendChild(a);
+
+
+
+                        console.log("href=", parkurl)
 
 
 
