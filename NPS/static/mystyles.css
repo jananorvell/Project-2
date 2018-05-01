@@ -1,0 +1,86 @@
+/* @override 
+	http://pixelprowess.com/pixelprowess/photos/mystyles.css
+	http://photos.pixelprowess.com/mystyles.css */
+
+body {
+	color: #28343B;
+	background: url(images/noisetexture.png),
+		-webkit-linear-gradient(top, #b5bdc8 0%, #28343b) no-repeat;
+   height: 800px;
+   font-family: "Fjord One";
+}
+
+header {
+	width: 800px;
+	margin: 0 auto;	
+}
+
+#gallery {
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+    overflow: none;
+    opacity: 0;
+}
+
+.galleria-container {
+   -webkit-border-radius: 10px;
+   -webkit-box-shadow: 2px 2px 3px rgba(255,255,255,.2), -2px -2px 3px rgba(0,0,0,.2);
+}
+.galleria-info {
+	opacity: .6;
+	position: relative;
+	left: 40px;
+	overflow: hidden;
+}
+
+@-webkit-keyframes slidein {
+    0%   {
+    	opacity: 0;
+    	-webkit-transform: translateY(-80px);
+    }
+}
+
+.galleria-info-text {
+	display: block;
+	-webkit-border-radius: 0 0 10px 10px;
+	-webkit-animation: slidein .5s ease-out;
+}
+
+.galleria-info-link {
+   display: none !important;
+}
+
+.galleria-info-close {
+   display: none !important;
+}
+
+.FotomotoSeparator {
+   display: none !important;
+}
+
+.FotomotoToolbarClass {
+   width: 170px !important;
+   paddingtop: 10px;
+   position: relative !important;
+   top: -100px !important;
+   z-index: 10;
+   float: right;
+}
+
+.FotomotoToolbarClass a {
+   color: white;
+   font: normal 12px Arial !important;
+   display: block;
+   padding: 7px !important;
+   -webkit-border-radius: 10px;
+   margin: 5px !important;
+   background-color: rgba(131, 25, 25, .7);
+}
+.galleria-info-title {
+   font-size: 20px !important;
+}
+.FotomotoToolbarClass a:hover {
+   background-color: rgba(131, 25, 25, 1);
+}
+				

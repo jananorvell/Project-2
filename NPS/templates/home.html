@@ -1,19 +1,100 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css">
+  
 
-{% block body %}
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
+        
+        <title> Parks</title>
+        <link rel="stylesheet" href= {{ url_for('static', filename='mystyles.css') }} />
+    </head>
+ {% include 'includes/_navbar.html' %}
   <div class="jumbotron text-center">
     <h1>Exploring Our National Parks</h1>
     <h4>with</h4>
     <h4>Brenda, Patsy, Diane and Jana</h4>   
-    <p></p>
-    <img style="text-align:center" src="https://media.giphy.com/media/rUrPxeIxcwZTq/giphy.gif" width="690">
-    <p></p>
-    <p>Data Sources:<p/>
-      <p><a href="https://catalog.data.gov/dataset/national-park-boundariesf0a4c/resource/4e29cd83-62eb-4a46-8b91-e246783d84c8" target="_blank">National Park Boundaries from Data.gov</a><p/>
-      <p><a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Annual%20Visitation%20By%20Park%20(1979%20-%20Last%20Calendar%20Year)" target="_blank">U.S. Dept. of the Interior Annual Park Visitation</a><p/>
+   
+
+  
+    <body>
+       
+        <div id="gallery">
+            
+            <img src= {{ url_for('static', filename='Mt Helen Glacier National Park.jpg') }} alt="Engineering marvel Going-to-the-Sun Road cuts through the middle of the park, but was designed to go relatively unnoticed." title="Going-to-the-Sun Road">
+    
+            <img src= {{ url_for('static', filename='Mesa Arch Sunrise.jpg') }} alt="Mesa Arch at sunrise is a popular destination for photographers." title="Mesa Arch Sunrise">
+            
+            <img src= {{ url_for('static', filename='Katmai.jpg') }} alt="A fat brown bear sits on a gravel bar near Brooks River." title="Bear 410 sits near Brooks River">
+            
+            <img src= {{ url_for('static', filename='arches national.jpg') }} alt="The night sky." title="North Window and Milky Way">
+            
+            <img src= {{ url_for('static', filename='Upper Delaware.jpg') }} alt="A foggy morning on the Upper Delaware." title="Upper Delaware Scenic and Recreational River">
+            
+            <img src= {{ url_for('static', filename='Captain Brown.jpg') }} alt="Captain Brown's Company prepares to open fire. Powder smoke was a major factor in 18th century warfare, obsuring the battlefield and increasing the confusion of the combatants." title="Captain Brown's Company">
+            
+            <img src= {{ url_for('static', filename='organ trail.jpg') }} alt="After many families died in the cold rapids of the Columbia River, emigrants sought an alternative route to reach their destination in the Oregon Territory. Barlow road followed the southern banks of the Columbia, around Mt Hood and through the deep forest to Oregon City." title="Barlow Road">
+            
+            <img src= {{ url_for('static', filename='night sky.jpg') }} alt="!" title="Experience Nature's Light Show in Voyageurs National Park">
+            
+            <img src= {{ url_for('static', filename='26675703407_0ecbfcbfe0_o.jpg') }} alt="." title="r">
+            
+            <img src= {{ url_for('static', filename='38259078702_3f4a352079_o.jpg') }} alt="." title="">
+            
+            <img src= {{ url_for('static', filename='38401254631_28072a4c6a_o.jpg') }} alt="." title="r">
+            
+            <img src= {{ url_for('static', filename='40832948914_aa85f31db3_o.jpg') }} alt="" title="">
+            
+            <img src= {{ url_for('static', filename='41503550462_457a9bc43b_o.jpg') }} alt="" title="">
+            
+            <img src= {{ url_for('static', filename='41562271481_69e5ede1d8_o.jpg') }} alt="">
+        
+        
+        
+        </div>
 
 
-  </div>
 
-{% endblock %}
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='jquery.min.js'>\x3C/script>")</script>
+<script src="myscripts.js" type="text/javascript"></script>
+
+<script src= {{ url_for('static', filename='galleria-1.5.7.min.js') }} ></script>
+
+
+<script src= {{ url_for('static', filename='galleria.classic.min.js') }} ></script>
+
+<script>
+    $(document).ready(function() {
+       $('#gallery').galleria({
+           transition: 'fadeslide',
+           width:800,
+           height:600
+       });
+    });
+   
+   $(window).load(
+       function() {
+           $('#gallery').css('opacity','1');
+       }
+   );
+  </script>
+
+
+
+
+    </Body>
+</html>
